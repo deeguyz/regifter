@@ -1,0 +1,13 @@
+<h1>Submissions Index</h1>
+
+<div class="container">
+  <%@submissions.each do |submission| %>
+    <div class="row">
+      <h3><%= submission.link %></h3>
+      <h3><%= submission.price %></h3>
+      <p><%= submission.description %></p>
+   </div>
+  <% end %>
+  <br>
+  <%= link_to "Make new submission", 'submissions/new' , class: "btn btn-primary" %>
+</div>
