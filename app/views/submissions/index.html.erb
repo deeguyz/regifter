@@ -6,9 +6,12 @@
 <div class="container">
   <%@submissions.each do |submission| %>
     <div class="row">
+       <p><%= image_tag(submission.avatar.url(:medium)) %> </p> 
       <h3><%= submission.link %></h3>
       <h3><%= submission.price %></h3>
       <p><%= submission.description %></p>
+      
+    
    </div>
   <% end %>
   <br>

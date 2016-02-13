@@ -19,7 +19,7 @@ class SubmissionsController < ApplicationController
   
   private
     def submission_params
-      params.require(:submission).permit(:link, :description, :price)
+      params.require(:submission).permit(:link, :description, :price, :avatar)
     end
     
 end
