@@ -1,0 +1,20 @@
+<h1>New Submission</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@submission) do |f| %>
+
+      <%= f.label :link %>
+      <%= f.text_field :link, class: 'form-control' %>
+      
+      <%= f.label :price %>
+      <%= f.text_field :price, class: 'form-control' %>
+
+      <%= f.label :description %>
+      <%= f.text_area :description, class: 'form-control' %>
+      
+      <br>
+      <%= f.submit "Make submission", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

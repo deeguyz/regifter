@@ -1,11 +1,25 @@
 class SubmissionsController < ApplicationController
-    def new
+ 
+  def index
+    @submissions = Submission.all 
+  end
+ 
+  def new
+    @submission = Submission.new
+  end
+  
+  def create
+    @submission = Submission.new(submission_params)
+    if @submission.save
+      redirect_to '/submissions'
+    else
+      render 'new'
     end
-    
-    def create
-    end
-    
-    def show
+  end
+  
+  private
+    def submission_params
+      params.require(:submission).permit(:link, :description, :price)
     end
     
 end
