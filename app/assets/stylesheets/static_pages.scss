@@ -34,6 +34,7 @@ h1{
   margin-bottom: 30px;
   text-align: center;
   margin-top: 28px;
+  color: #b30047;
 }
 
 .header{
@@ -44,6 +45,11 @@ h1{
 //   background-repeat: no-repeat;
   margin-top: 0;
   opacity: 1;
+}
+
+.navbar-default {
+    background-color: #b30047;
+    border-color: #b30047;
 }
 
 #get-started-button {
@@ -64,7 +70,7 @@ p.help-text {
   float: left;
   margin-right: 10px;
   font-size: 1.5em;
-  color: white;
+  color: #ffffff;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
