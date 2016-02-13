@@ -1,11 +1,10 @@
-<h1>Submissions Index</h1>
+<% provide(:title, "Index") %>
+<h1>Listings Index</h1>
 
 <div class="container">
   <% @submissions.each do |submission| %>
     <div>
       <h3><%= link_to submission.title, {action: 'show', id: submission.id} %></h3>
-      <p class="submission-listing"><%= submission.link %></p>
-      <p class="submission-listing">Price ($): ~<%= submission.price %></p>
       <p class="submission-listing"><%= submission.description %></p>
       <p>
         <%= link_to 'Edit', {action: 'edit', id: submission.id} %> 
@@ -16,6 +15,6 @@
   <% end %>
   <br>
   <div id="help-options">
-    <%= link_to "Make new submission", new_path , class: "btn btn-primary" %>
+    <%= link_to "Make a New Listing", new_path , class: "btn btn-primary" %>
   </div>
 </div>
