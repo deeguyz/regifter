@@ -1,31 +1,23 @@
 <% provide(:title, "Index") %>
   <h1>Listings Index</h1>
-
-<div class="container">
   <% @submissions.each do |submission| %>
-    <div class="container", style="margin: auto; width:500px;height:200px;border:1px solid red">
-      <h3><%= link_to submission.title, {action: 'show', id: submission.id}, 
-          {:style=>'color:#e6005c', :class => "css_class"} %></h3>
-      <p class="submission-listing"><%= submission.description %></p>
-      <p>
-        <%= link_to 'Edit', {action: 'edit', id: submission.id}, 
-          {:style=>'color:#e6005c', :class => "css_class"} %> 
-        <%= link_to "Delete", {action: 'delete', id: submission.id},
-          {data: {:confirm => "Are you sure you want to delete this item?"}, 
-             :style=>'color:#e6005c', :class => "css_class"} %>
-      </p>
-    </div>
-    <div class="container", style="width:500px;height:280px; border:1px inset green" >
-        <p><center><%= image_tag(submission.avatar.url(:medium)) %></center> </p> 
-    </div>
+  <div class="container listing-container">
+    <h3><%= link_to submission.title, {action: 'show', id: submission.id}, 
+        {:style=>'color:#e6005c', :class => "css_class"} %></h3>
+    <p class="submission-listing"><%= submission.description %></p>
+    <p><center><%= image_tag(submission.avatar.url(:medium)) %></center></p>
+    <br>
+    <p>
+      <%= link_to 'Edit', {action: 'edit', id: submission.id}, 
+        {:style=>'color:#e6005c', :class => "css_class"} %> 
+      <%= link_to "Delete", {action: 'delete', id: submission.id},
+        {data: {:confirm => "Are you sure you want to delete this item?"}, 
+           :style=>'color:#e6005c', :class => "css_class"} %>
+    </p>
+  </div>
   <% end %>
   <br>
   <div id="help-options">
     <%= link_to "Make a New Listing", new_path , class: "btn btn-danger" %>
   </div>
-</div>
-
   <br>
-</div>
-</div>
-

@@ -1,15 +1,14 @@
 <% provide(:title, "Edit") %>
+<br>
 <h1>Edit Listing Detail</h1>
-
-<%= form_for @submission, url: {action: 'update' , id: @submission.id} do |f| %>
-
-<p>Title: <%= f.text_field 'title' %></p>
-<p>Description: <%= f.text_area 'description' %></p>
-
-<%= f.submit "Save changes", class: "btn btn-danger" %>
-<% end %>
-
-</br>
-<ul class="pager">
-  <li><%= link_to 'Back', root_path %></li>
-</ul>
+<div class="container listing-container">
+  <%= form_for @submission, url: {action: 'update' , id: @submission.id} do |f| %>
+  
+  <p>Title: <%= f.text_field 'title' %></p>
+  <p>Description: <%= f.text_area 'description' %></p>
+  <p><%= f.file_field :avatar, class:'form-control input-normal' %></p>
+  
+  <%= f.submit "Save changes", class: "btn btn-danger" %>
+  <%= link_to "Back", index_path , class: "btn btn-danger" %>
+  <% end %>
+</div>

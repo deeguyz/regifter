@@ -1,15 +1,14 @@
 <% provide(:title, "Show") %>
-<div class="container">
-   <div class="jumbotron" id="show-jumbotron">
+<br>
+<div class="container listing-container">
       <p class="show-text">
          <strong>Title: </strong><%= @submission.title %><br>
          <strong>Description: </strong><%= @submission.description %><br>
       </p>
-   </div>
+      <center><%= image_tag(@submission.avatar.url(:medium)) %></center>
 </div>
-
- 
-<ul class="pager">
-  <li><%= link_to 'Back', index_path %></li>
-  <li><%= link_to 'Edit', {action: 'edit', id: @submission.id} %></li>
-</ul>
+<br>
+<div id="help-options">
+      <%= link_to "Back", index_path , class: "btn btn-danger" %>
+      <%= link_to "Edit", {action: 'edit', id: @submission.id} , class: "btn btn-danger" %>
+</div>
