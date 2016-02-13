@@ -1,6 +1,6 @@
 <h1>Edit Submission Detail</h1>
 
-<%= form_for @submission, url: {action: 'update' , id: @submission} do |f| %>
+<%= form_for @submission, url: {action: 'update' , id: @submission.id} do |f| %>
 
 <p>Title: <%= f.text_field 'title' %></p>
 <p>Link: <%= f.text_field 'link' %></p>

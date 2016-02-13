@@ -4,11 +4,15 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'static_pages#home'
-   resources :submissions
+  resources :submissions
    get 'delete' => 'submissions#delete'
    get 'new' => 'submissions#new'
    get 'index' => 'submissions#index'
    patch 'submissions/update'
+   get 'show' => 'submissions#show'
+   get 'edit' => 'submissions#edit'
+
+   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

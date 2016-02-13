@@ -30,7 +30,7 @@ class SubmissionsController < ApplicationController
     @submission = Submission.find(params[:id])
     
     if @submission.update(submission_param)
-      redirect_to '/submissions/show', id: @submission
+      redirect_to action: 'show', id: @submission.id
     else
       render '/submissions/edit'
     end

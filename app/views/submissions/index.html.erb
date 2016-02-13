@@ -3,7 +3,7 @@
 <div class="container">
   <% @submissions.each do |submission| %>
     <div>
-      <h3><%= submission.title %></h3>
+      <h3><%= link_to submission.title, {action: 'show', id: submission.id} %></h3>
       <p class="submission-listing"><%= submission.link %></p>
       <p class="submission-listing">Price ($): ~<%= submission.price %></p>
       <p class="submission-listing"><%= submission.description %></p>
