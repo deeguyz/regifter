@@ -12,6 +12,10 @@
       <%= f.text_area :description, class: 'form-control', 
       placeholder: "I'm giving away an unopened box of Lindt chocolates. If you're interested, contact me at john@example.com. I'm in the Downtown Vancouver area."%>
       
+      
+      <%= f.label :avatar %>
+      <%= f.file_field :avatar, class:'form-control input-normal' %>
+      
       <br>
       <div class="help-options">
         <%= link_to "Browse the Index", index_path, class: "btn btn-primary" %>

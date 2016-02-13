@@ -1,16 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* mixins, variables, etc. */
-
-$gray-medium-light: #eaeaea;
-
-@mixin box_sizing {
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
-}
-
 /* universal */
 
 body {
@@ -133,4 +123,16 @@ p.help-text {
 
 .submission-listing {
   font-size: 1.2em;
+}
+
+.avatar_edit {
+  text-align: center;
+}
+
+
+.avatar_edit img {
+  border: solid;
+  border-width: 5px;
+  width: 15%;
+  border-radius: 50%;
 }
