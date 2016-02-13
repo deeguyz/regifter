@@ -13,7 +13,7 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
-html, body {
+body {
   padding-top: 70px;
   //margin: 0px auto;
 	//padding:0;
@@ -23,6 +23,7 @@ html, body {
 	 margin: 0;
    padding: 0;
    height: 100%;
+   background: #FDB8B8;
 }
 
 .navbar {
@@ -78,9 +79,53 @@ p.help-text {
   font-weight: bold;
   &:hover {
     color: white;
+    // margin-top: 15px;
+    // text-align: center;
     text-decoration: none;
   }
 }
+
+#snow{
+	background: none;
+// 	font-family: Androgyne;
+	background-image: url('http://i.imgur.com/baiPIpt.png'),
+	url('http://i.imgur.com/DgJJe8O.png'), 
+	url('http://i.imgur.com/5CRH55E.png');
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index:1;
+	-webkit-animation: snow 10s linear infinite;
+	-moz-animation: snow 10s linear infinite;
+	-ms-animation: snow 10s linear infinite;
+	animation: snow 10s linear infinite;
+}
+
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}	
 
 .btn {
   font-size: 1.2em;
