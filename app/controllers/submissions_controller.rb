@@ -13,12 +13,41 @@ class SubmissionsController < ApplicationController
     if @submission.save
       redirect_to '/submissions'
     else
-      render 'new'
+      render '/submissions/new'
     end
+  end
+  
+  def show
+    @submission = Submission.find(params[:id])
+  end
+  
+  def edit
+    @submission = Submission.find(params[:id])
+  end
+  
+  # Updates the database with the edits
+  def update
+    @submission = Submission.find(params[:id])
+    
+    if @submission.update(submission_param)
+      redirect_to '/submissions/show', id: @submission
+    else
+      render '/submissions/edit'
+    end
+  end
+  
+  # Deletes a Submission object
+  def delete
+    Submission.find(params[:id]).destroy
+    redirect_to '/submissions'
   end
   
   private
     def submission_params
+      params.require(:submission).permit(:link, :description, :price)
+    end
+    
+    def submission_param
       params.require(:submission).permit(:link, :description, :price)
     end
     

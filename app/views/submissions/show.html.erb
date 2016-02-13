@@ -1,0 +1,15 @@
+<div class="container">
+   <div class="jumbotron" id="show-jumbotron">
+      <p class="show-text">
+         <strong>Link: </strong><%= @submission.link %><br>
+         <strong>Price: </strong><%= @submission.price %><br>
+         <strong>Description: </strong><%= @submission.description %><br>
+      </p>
+   </div>
+</div>
+
+ 
+<ul class="pager">
+  <li><%= link_to 'Back', root_path %></li>
+  <li><%= link_to 'Edit', {action: 'edit', id: @submission.id} %></li>
+</ul>

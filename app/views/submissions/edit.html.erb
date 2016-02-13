@@ -1,0 +1,15 @@
+<h1>Edit Submission Detail</h1>
+
+<%= form_for @submission, url: {action: 'update' , id: @submission} do |f| %>
+
+<p>Link: <%= f.text_field 'link' %></p>
+<p>Price: <%= f.text_field 'price' %></p>
+<p>Description: <%= f.text_area 'description' %></p>
+
+<%= f.submit "Save changes" %>
+<% end %>
+
+</br>
+<ul class="pager">
+  <li><%= link_to 'Back', root_path %></li>
+</ul>
