@@ -2,11 +2,12 @@
 
 <%= form_for @submission, url: {action: 'update' , id: @submission} do |f| %>
 
+<p>Title: <%= f.text_field 'title' %></p>
 <p>Link: <%= f.text_field 'link' %></p>
-<p>Price: <%= f.text_field 'price' %></p>
+<p>Price ($): <%= f.text_field 'price' %></p>
 <p>Description: <%= f.text_area 'description' %></p>
 
-<%= f.submit "Save changes" %>
+<%= f.submit "Save changes", class: "btn btn-primary" %>
 <% end %>
 
 </br>

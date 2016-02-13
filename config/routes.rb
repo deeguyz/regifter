@@ -3,10 +3,12 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'submissions#index'
+   root 'static_pages#home'
    resources :submissions
    get 'delete' => 'submissions#delete'
-
+   get 'new' => 'submissions#new'
+   get 'index' => 'submissions#index'
+   patch 'submissions/update'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

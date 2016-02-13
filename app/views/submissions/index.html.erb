@@ -1,18 +1,21 @@
 <h1>Submissions Index</h1>
 
 <div class="container">
-  <%@submissions.each do |submission| %>
-    <div class="row">
-      <h3><%= submission.link %></h3>
-      <h3><%= submission.price %></h3>
-      <p><%= submission.description %></p>
-      <p><%= link_to 'Edit', {action: 'edit', id: submission.id}, 
-             {:style=>'color:#000000', :class => "css_class"} %> 
-           <%= link_to "Delete", {action: 'delete', id: submission.id},
-           {data: {:confirm => "Are you sure you want to delete this submission?"}, 
-             :style=>'color:#000000', :class => "css_class"} %></p>
+  <% @submissions.each do |submission| %>
+    <div>
+      <h3><%= submission.title %></h3>
+      <p class="submission-listing"><%= submission.link %></p>
+      <p class="submission-listing">Price ($): ~<%= submission.price %></p>
+      <p class="submission-listing"><%= submission.description %></p>
+      <p>
+        <%= link_to 'Edit', {action: 'edit', id: submission.id} %> 
+        <%= link_to "Delete", {action: 'delete', id: submission.id},
+          {data: {:confirm => "Are you sure you want to delete this submission?"}} %>
+      </p>
    </div>
   <% end %>
   <br>
-  <%= link_to "Make new submission", 'submissions/new' , class: "btn btn-primary" %>
+  <div id="help-options">
+    <%= link_to "Make new submission", new_path , class: "btn btn-primary" %>
+  </div>
 </div>

@@ -1,11 +1,15 @@
-
-<div class = "container header">
-    <nav>
-        <ul class = "navbar">
-            <p>
-                Testing shit
-            </p>
-        </ul>
-    </nav>
-    
+<div class="container">
+  <h1>Welcome!</h1>
+  <p class="help-text">Haven't bought your significant other a Valentine's gift yet? 
+  Running out of ideas as the clock ticks down?</p>
+  <br>
+  <p class="help-text"> Crowd source suggestions for your Valentine's Day gift!</p>
+  <br>
+  <p class="help-text">Browse the Index to see what has worked well for our contributors or
+  share your success stories to inspire others to try similar ideas!</p>
+  <br>
+  <div id="help-options">
+    <%= link_to "Browse the Index", index_path, class: "btn btn-primary" %> 
+    <%= link_to "Submit an Idea", new_path, class: "btn btn-primary" %>
+  </div>
 </div>

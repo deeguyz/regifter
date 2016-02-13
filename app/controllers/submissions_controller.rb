@@ -17,11 +17,11 @@ class SubmissionsController < ApplicationController
     end
   end
   
-  def show
+  def edit
     @submission = Submission.find(params[:id])
   end
   
-  def edit
+  def show
     @submission = Submission.find(params[:id])
   end
   
@@ -44,11 +44,11 @@ class SubmissionsController < ApplicationController
   
   private
     def submission_params
-      params.require(:submission).permit(:link, :description, :price)
+      params.require(:submission).permit(:title, :link, :description, :price)
     end
     
     def submission_param
-      params.require(:submission).permit(:link, :description, :price)
+      params.require(:submission).permit(:title, :link, :description, :price)
     end
     
 end

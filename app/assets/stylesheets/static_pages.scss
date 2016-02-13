@@ -55,8 +55,37 @@ h1{
   opacity: 1;
 }
 
-#header-text {
+#get-started-button {
+  text-align: center;
+  margin-top: 50px;
+}
+
+p.help-text {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#help-options {
+  text-align: center;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.5em;
+  color: white;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
     color: white;
-    margin-top: 15px;
-    text-align: center;
+    text-decoration: none;
+  }
+}
+
+.btn {
+  font-size: 1.2em;
+}
+
+.submission-listing {
+  font-size: 1.2em;
 }
